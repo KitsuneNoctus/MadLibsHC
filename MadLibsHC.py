@@ -6,19 +6,16 @@
 inputWords = list()
 story1Words = ["Noun","Adj","Verb"]
 
-def takeInput(list):
-    #Taking in the words from user and assigning it to an array for use later
-    return 0
+# def takeInput(list):
+#     #Taking in the words from user and assigning it to an array for use later
+#     return 0
 
-#Stuff
-def chooseStory():
-    if choice == 1:
-        return 0
-    else:
-        print("Try Again")
-
-def createStory():
-    return 0
+def createStory(list):
+    for i in range(0,len(list)):
+        wordChoice = input("Enter a " + list[i] + ": ")
+        #print("Give a "+)
+        list[i] = wordChoice
+    print(list)
 
 
 
@@ -28,12 +25,15 @@ def MadGame():
         print("Madlibs! The Creative Story Game")
         print("--------------------------------")
         print("Choose A Story: ")
-        print(" 1) A Man of Taste")
+        print(" 1) Egg")
         print("Q = Quit")
         choice = input("Which Story?: ")
-        if choice == 1:
-            createStory()
-        elif choice == Q:
+
+        if choice == "1":
+            createStory(story1Words)
+        elif choice == "Q":
             on = False
         else:
-            print("Sorry, That isn't an option.")
+            print("Sorry, That isn't an option")
+
+MadGame()
