@@ -21,17 +21,22 @@ def createStory(listOfWords):
 
 
 def printStory(choice, wordsGiven):
-    story1 = ["Hi There ","You look ","Keep on the "]
+    story1 = ["Hi There ",". You look ",". Keep on the "]
     if choice == 1:
         storyChoice = story1
         print("First Chosen")
     else:
         print("Nothing Selected")
 
-    print("------------Story-------------")
+    #print("------------Story
+    wholeStory = ""
     for i in range(0, len(storyChoice)):
-        print(storyChoice[i]+ wordsGiven[i])
+        wholeStory += storyChoice[i]+ wordsGiven[i]
+        #print(storyChoice[i]+ wordsGiven[i])
+    print("------------Story-------------")
+    print(wholeStory)
     print("------------------------------")
+
 
 
 
