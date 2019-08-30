@@ -5,7 +5,7 @@
 
 inputWords = ["None"]
 #Tuple list to make sure contents dont change
-story1Words = ("Noun","Adj","Verb")
+story1Words = ("Noun","Number","Noun","Verb","Adj","Verb ending in 'ing'","Adj","Adj","Noun","Name")
 
 # def takeInput(list):
 #     #Taking in the words from user and assigning it to an array for use later
@@ -21,19 +21,31 @@ def createStory(listOfWords):
 
 
 def printStory(choice, wordsGiven):
-    story1 = ["Hi There ",". You look ",". Keep on the "]
+    # story1 = ("There once was a man who lived on a ",". He owned "," egg cups, which he holdsmost dear. One day a giant ",
+    # " struck his home, making all the egg cups ",". His ", " egg cups were now a mess. The man was ", " around tyring to clean up. It took him hours, but he was very ",
+    # " once he was done. He noticed that that his favorite ", " egg cupwas missing. He ran all up and down the ", " looking for it. Alas, it was nowhere to be found, and so ",
+    # " went home with one less egg cup")
+    print("------------Story-------------")
     if choice == 1:
-        storyChoice = story1
         print("First Chosen")
+        print("There once was a man who lived on a "+wordsGiven[0]+". He owned "+wordsGiven[1]+" egg cups, which he holds most dear. One day a giant "+wordsGiven[2]+
+        " struck his home, making all the egg cups "+wordsGiven[3]+". His "+wordsGiven[4]+" egg cups were now a mess. The man was "+wordsGiven[5]+" around tyring to clean up. It took him hours, but he was very "+wordsGiven[6]+
+        " once he was done. He noticed that that his favorite "+wordsGiven[7]+" egg cup was missing. He ran all up and down the "+wordsGiven[8]+" looking for it. Alas, it was nowhere to be found, and so "+wordsGiven[9]+
+        " went home with one less egg cup.")
+        #storyChoice = list(story1)
     else:
         print("Nothing Selected")
 
-    wholeStory = ""
-    for i in range(0, len(storyChoice)):
-        wholeStory += storyChoice[i]+ wordsGiven[i]
-    print("------------Story-------------")
-    print(wholeStory)
     print("------------------------------")
+    # print(len(story1))
+    # print(len(wordsGiven))
+
+    wholeStory = ""
+    # for i in range(0, len(storyChoice)):
+    #     wholeStory += storyChoice[i]+ wordsGiven[i]
+    # print("------------Story-------------")
+    # print(wholeStory + ".")
+    # print("------------------------------")
 
 
 
@@ -59,4 +71,4 @@ def MadGame():
             print("Sorry, That isn't an option")
 
 MadGame()
-print(story1Words)
+#print(story1Words)
