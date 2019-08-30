@@ -28,11 +28,9 @@ def printStory(choice, wordsGiven):
     else:
         print("Nothing Selected")
 
-    #print("------------Story
     wholeStory = ""
     for i in range(0, len(storyChoice)):
         wholeStory += storyChoice[i]+ wordsGiven[i]
-        #print(storyChoice[i]+ wordsGiven[i])
     print("------------Story-------------")
     print(wholeStory)
     print("------------------------------")
