@@ -6,6 +6,7 @@ import string
 #inputWords = ["None"]
 #Tuple list to make sure contents dont change
 story1Words = ("Noun","Number","Noun","Verb","Adj","Verb ending in 'ing'","Adj","Adj","Noun","Name")
+story2Words = ("Adj","Noun","Adj ending with -est","Noun")
 
 # def takeInput(list):
 #     #Taking in the words from user and assigning it to an array for use later
@@ -51,6 +52,8 @@ def printStory(choice, wordsGiven):
         " once he was done. He noticed that that his favorite "+wordsGiven[7]+" egg cup was missing. He ran all up and down the "+wordsGiven[8]+" looking for it. Alas, it was nowhere to be found, and so "+wordsGiven[9]+
         " went home with one less egg cup.")
         #storyChoice = list(story1)
+    if choice == 2:
+        print("Hello you absolute "+wordsGiven[0]+" "+wordsGiven[1]+". You better try your "+wordsGiven[2]+" today you "+wordsGiven[3]+".")
     else:
         print("Nothing Selected")
 
@@ -76,6 +79,7 @@ def MadGame():
         print("-*----------------------------*-")
         print("Choose A Story: ")
         print(" 1) The Man and His Cups")
+        print(" 2) Short and Sweet.")
         print("Q = Quit")
 
         choice = input("Which Story?: ")
@@ -84,6 +88,10 @@ def MadGame():
             choice = 1
             #createStory(story1Words)
             printStory(choice, createStory(story1Words))
+        if choice == "2":
+            choice = 2
+            #createStory(story1Words)
+            printStory(choice, createStory(story2Words))
         elif choice == "Q":
             on = False
         else:
