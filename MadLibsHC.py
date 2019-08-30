@@ -27,7 +27,6 @@ def printStory(choice, wordsGiven):
     # " went home with one less egg cup")
     print("------------Story-------------")
     if choice == 1:
-        print("First Chosen")
         print("There once was a man who lived on a "+wordsGiven[0]+". He owned "+wordsGiven[1]+" egg cups, which he holds most dear. One day a giant "+wordsGiven[2]+
         " struck his home, making all the egg cups "+wordsGiven[3]+". His "+wordsGiven[4]+" egg cups were now a mess. The man was "+wordsGiven[5]+" around tyring to clean up. It took him hours, but he was very "+wordsGiven[6]+
         " once he was done. He noticed that that his favorite "+wordsGiven[7]+" egg cup was missing. He ran all up and down the "+wordsGiven[8]+" looking for it. Alas, it was nowhere to be found, and so "+wordsGiven[9]+
@@ -56,7 +55,7 @@ def MadGame():
         print("Madlibs! The Creative Story Game")
         print("--------------------------------")
         print("Choose A Story: ")
-        print(" 1) Egg")
+        print(" 1) The Man and His Cups")
         print("Q = Quit")
         inputWords.clear()
         choice = input("Which Story?: ")
