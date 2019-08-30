@@ -20,32 +20,20 @@ def createStory(listOfWords):
         while improperInput:
             takenInput = input("Enter a " + listOfWords[i] + ": ")
             checked = isInputOkay(takenInput)
-            # if takenInput == "":
-            #     print("No Blanks please! Give Input.")
-            #elif takenInput.isalpha != True and takenInput.isdigit != True:
-                #Three Refernces used here
-                #print("None of that. Try Again.")
-            # for punc in string.punctuation:
-            #     if takenInput == punc:
-            #         print("Not Proper input. Try Again.")
             if checked == False:
                 print("Improper Input, Try Again.")
             else:
                 storedList[i] = takenInput
                 improperInput = False
-
-
-        # takenInput = input("Enter a " + listOfWords[i] + ": ")
-        # if takenInput == "":
-        #     print("Not an Option, try again")
-        # else:
-        #     storedList[i] = takenInput
-        # inputWords[i].append(wordChoice)
     #print(storedList)
     return storedList
-def isInputOkay(inputFromList):
-    if inputFromList == "":
-        print("No Blanks please! Give Input.")
+
+
+def isInputOkay(inputForList):
+
+    if inputForList == "":
+        return False
+    elif inputForList in string.punctuation:
         return False
     else:
         return True
