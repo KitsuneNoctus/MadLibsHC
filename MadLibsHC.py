@@ -2,7 +2,7 @@
 # IDE/OS: Atom/ MAC OS
 # August 28, 2019
 # Purpose: Creating a MadLinbs game in Python
-
+import string
 inputWords = ["None"]
 #Tuple list to make sure contents dont change
 story1Words = ("Noun","Number","Noun","Verb","Adj","Verb ending in 'ing'","Adj","Adj","Noun","Name")
@@ -15,14 +15,25 @@ def createStory(listOfWords):
     storedList = list(listOfWords)
     for i in range(0, len(listOfWords)):
         improperInput = True
+        checked = True
         #storedList[i] = input("Enter a " + listOfWords[i] + ": ")
         while improperInput:
             takenInput = input("Enter a " + listOfWords[i] + ": ")
-            if takenInput == "":
-                print("Not an Option, try again")
+            checked = isInputOkay(takenInput)
+            # if takenInput == "":
+            #     print("No Blanks please! Give Input.")
+            #elif takenInput.isalpha != True and takenInput.isdigit != True:
+                #Three Refernces used here
+                #print("None of that. Try Again.")
+            # for punc in string.punctuation:
+            #     if takenInput == punc:
+            #         print("Not Proper input. Try Again.")
+            if checked == False:
+                print("Improper Input, Try Again.")
             else:
                 storedList[i] = takenInput
                 improperInput = False
+
 
         # takenInput = input("Enter a " + listOfWords[i] + ": ")
         # if takenInput == "":
@@ -32,6 +43,12 @@ def createStory(listOfWords):
         # inputWords[i].append(wordChoice)
     #print(storedList)
     return storedList
+def isInputOkay(inputFromList):
+    if inputFromList == "":
+        print("No Blanks please! Give Input.")
+        return False
+    else:
+        return True
 
 
 def printStory(choice, wordsGiven):
