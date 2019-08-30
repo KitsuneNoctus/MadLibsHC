@@ -92,7 +92,7 @@ def MadGame():
             choice = 2
             #createStory(story1Words)
             printStory(choice, createStory(story2Words))
-        elif choice == "Q":
+        elif choice == "Q" or choice == "q" or choice == "Quit":
             on = False
         else:
             print("Sorry, That isn't an option")
