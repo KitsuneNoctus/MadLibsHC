@@ -3,7 +3,7 @@
 # August 28, 2019
 # Purpose: Creating a MadLinbs game in Python
 import string
-inputWords = ["None"]
+#inputWords = ["None"]
 #Tuple list to make sure contents dont change
 story1Words = ("Noun","Number","Noun","Verb","Adj","Verb ending in 'ing'","Adj","Adj","Noun","Name")
 
@@ -77,7 +77,7 @@ def MadGame():
         print("Choose A Story: ")
         print(" 1) The Man and His Cups")
         print("Q = Quit")
-        inputWords.clear()
+
         choice = input("Which Story?: ")
 
         if choice == "1":
