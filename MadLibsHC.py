@@ -14,7 +14,21 @@ story1Words = ("Noun","Number","Noun","Verb","Adj","Verb ending in 'ing'","Adj",
 def createStory(listOfWords):
     storedList = list(listOfWords)
     for i in range(0, len(listOfWords)):
-        storedList[i] = input("Enter a " + listOfWords[i] + ": ")
+        improperInput = True
+        #storedList[i] = input("Enter a " + listOfWords[i] + ": ")
+        while improperInput:
+            takenInput = input("Enter a " + listOfWords[i] + ": ")
+            if takenInput == "":
+                print("Not an Option, try again")
+            else:
+                storedList[i] = takenInput
+                improperInput = False
+
+        # takenInput = input("Enter a " + listOfWords[i] + ": ")
+        # if takenInput == "":
+        #     print("Not an Option, try again")
+        # else:
+        #     storedList[i] = takenInput
         # inputWords[i].append(wordChoice)
     #print(storedList)
     return storedList
@@ -48,12 +62,13 @@ def printStory(choice, wordsGiven):
 
 
 
-
+#Based this menu off a game I made in a previous college course.
 def MadGame():
     on = True
     while on:
+        print("-*----------------------------*-")
         print("Madlibs! The Creative Story Game")
-        print("--------------------------------")
+        print("-*----------------------------*-")
         print("Choose A Story: ")
         print(" 1) The Man and His Cups")
         print("Q = Quit")
