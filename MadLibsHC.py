@@ -47,7 +47,7 @@ def printStory(choice, wordsGiven):
     print("------------Story-------------")
     if choice == 1:
         print("There once was a man who lived on a "+wordsGiven[0]+". He owned "+wordsGiven[1]+" egg cups, which he holds most dear. One day a giant "+wordsGiven[2]+
-        " struck his home, making all the egg cups "+wordsGiven[3]+". His "+wordsGiven[4]+" egg cups were now a mess. The man was "+wordsGiven[5]+" around tyring to clean up. It took him hours, but he was very "+wordsGiven[6]+
+        " struck his home, making all the egg cups "+wordsGiven[3]+". His "+wordsGiven[4]+" egg cups were now a mess. The man was "+wordsGiven[5]+" around trying to clean up. It took him hours, but he was very "+wordsGiven[6]+
         " once he was done. He noticed that that his favorite "+wordsGiven[7]+" egg cup was missing. He ran all up and down the "+wordsGiven[8]+" looking for it. Alas, it was nowhere to be found, and so "+wordsGiven[9]+
         " went home with one less egg cup.")
         #storyChoice = list(story1)
