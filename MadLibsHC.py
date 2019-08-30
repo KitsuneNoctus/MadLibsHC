@@ -4,6 +4,7 @@
 # Purpose: Creating a MadLinbs game in Python
 
 inputWords = ["None"]
+#Tuple list to make sure contents dont change
 story1Words = ("Noun","Adj","Verb")
 
 # def takeInput(list):
@@ -12,21 +13,25 @@ story1Words = ("Noun","Adj","Verb")
 
 def createStory(listOfWords):
     storedList = list(listOfWords)
-    for i in range(0, len(listOfWords)-1):
+    for i in range(0, len(listOfWords)):
         storedList[i] = input("Enter a " + listOfWords[i] + ": ")
         # inputWords[i].append(wordChoice)
     #print(storedList)
+    return storedList
 
 
-# def printStory(choice, wordsGiven):
-#     story1 = ["Hi There ","You look ","Keep on the "]
-#     if choice == 1:
-#         storyChoice = story1
-#     else:
-#         print("Nothing Selected")
-#
-#     for i in range(0, len(storyChoice)):
-#         print(storyChoice[i]+ wordsGiven[i])
+def printStory(choice, wordsGiven):
+    story1 = ["Hi There ","You look ","Keep on the "]
+    if choice == 1:
+        storyChoice = story1
+        print("First Chosen")
+    else:
+        print("Nothing Selected")
+
+    print("------------Story-------------")
+    for i in range(0, len(storyChoice)):
+        print(storyChoice[i]+ wordsGiven[i])
+    print("------------------------------")
 
 
 
@@ -42,8 +47,9 @@ def MadGame():
         choice = input("Which Story?: ")
 
         if choice == "1":
-            createStory(story1Words)
-            # printStory(choice, inputWords)
+            choice = 1
+            #createStory(story1Words)
+            printStory(choice, createStory(story1Words))
         elif choice == "Q":
             on = False
         else:
