@@ -26,7 +26,20 @@ def createStory(listOfWords):
     userEnter = input("Would you like to let the computer decide the story? [Y]/[Any other button and you choose]: ")
     if userEnter == "Y" or userEnter == "Yes" or userEnter == "y":
         for i in range(0, len(listOfWords)):
-            print("Meow")
+            if listOfWords[i] == "Noun":
+                print("Meow")
+            elif listOfWords[i] == "Adj":
+                print("Moew")
+            elif listOfWords[i] == "Verb":
+                print("Hi")
+            elif listOfWords[i] == "Adj ending with -est":
+                print("j")
+            elif listOfWords[i] == "Verb ending in 'ing'":
+                print("Hi")
+            elif listOfWords[i] == "Name":
+                print("M")
+            elif listOfWords[i] == "Number":
+                print("N")
     else:
         for i in range(0, len(listOfWords)):
             improperInput = True
