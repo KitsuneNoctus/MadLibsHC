@@ -13,6 +13,9 @@ adjList = ("Sour","Moist","Smelly","Clean","Annoying","Tired")
 nounList = ("Burrito","Chihuahua","Egg","Mouse","Pokeball")
 verbList = ("Run","Cry","Scream","Fly","Drop","Fight")
 numList = ("200","10","3","9","80")
+verbingList = ("Running","Falling","Eating","Crying","Smiling")
+adjestList = ("Sweetest","Coldest","Hardest","Pinkest")
+nameList = ("Ben","Lewis","Trystan","Lex")
 
 # def takeInput(list):
 #     #Taking in the words from user and assigning it to an array for use later
@@ -20,18 +23,25 @@ numList = ("200","10","3","9","80")
 
 def createStory(listOfWords):
     storedList = list(listOfWords)
-    for i in range(0, len(listOfWords)):
-        improperInput = True
-        checked = True
-        #storedList[i] = input("Enter a " + listOfWords[i] + ": ")
-        while improperInput:
-            takenInput = input("Enter a " + listOfWords[i] + ": ")
-            checked = isInputOkay(takenInput)
-            if checked == False:
-                print("Improper Input, Try Again.")
-            else:
-                storedList[i] = takenInput
-                improperInput = False
+    userEnter = input("Would you like to let the computer decide the story? [Y]/[Any other button and you choose]: ")
+    if userEnter == "Y" or userEnter == "Yes" or userEnter == "y":
+        for i in range(0, len(listOfWords)):
+            print("Meow")
+    else:
+        for i in range(0, len(listOfWords)):
+            improperInput = True
+            checked = True
+            #storedList[i] = input("Enter a " + listOfWords[i] + ": ")
+            while improperInput:
+                takenInput = input("Enter a " + listOfWords[i] + ": ")
+                checked = isInputOkay(takenInput)
+                if checked == False:
+                    print("Improper Input, Try Again.")
+                else:
+                    storedList[i] = takenInput
+                    improperInput = False
+
+
     #print(storedList)
     return storedList
 
