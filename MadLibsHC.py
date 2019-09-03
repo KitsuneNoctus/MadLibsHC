@@ -9,13 +9,13 @@ import random
 story1Words = ("Noun","Number","Noun","Verb","Adj","Verb ending in 'ing'","Adj","Adj","Noun","Name")
 story2Words = ("Adj","Noun","Adj ending with -est","Noun")
 
-adjList = ("Sour","Moist","Smelly","Clean","Annoying","Tired")
-nounList = ("Burrito","Chihuahua","Egg","Mouse","Pokeball")
-verbList = ("Run","Cry","Scream","Fly","Drop","Fight")
-numList = ("200","10","3","9","80")
-verbingList = ("Running","Falling","Eating","Crying","Smiling")
-adjestList = ("Sweetest","Coldest","Hardest","Pinkest")
-nameList = ("Ben","Lewis","Trystan","Lex")
+adjList = ["Sour","Moist","Smelly","Clean","Annoying","Tired"]
+nounList = ["Burrito","Chihuahua","Egg","Mouse","Pokeball"]
+verbList = ["Run","Cry","Scream","Fly","Drop","Fight"]
+numList = ["200","10","3","9","80"]
+verbingList = ["Running","Falling","Eating","Crying","Smiling"]
+adjestList = ["Sweetest","Coldest","Hardest","Pinkest"]
+nameList = ["Ben","Lewis","Trystan","Lex"]
 
 # def takeInput(list):
 #     #Taking in the words from user and assigning it to an array for use later
@@ -27,19 +27,26 @@ def createStory(listOfWords):
     if userEnter == "Y" or userEnter == "Yes" or userEnter == "y":
         for i in range(0, len(listOfWords)):
             if listOfWords[i] == "Noun":
-                storedList[i] = nounList[randint(0,list(nounList()))]
+                num = random.randint(0,len(nounList[]))
+                storedList[i] = nounList[num]
             elif listOfWords[i] == "Adj":
-                storedList[i] = adjList[randint(0,list(adjList()))]
+                num = random.randint(0,len(adjList[]))
+                storedList[i] = adjList[num]
             elif listOfWords[i] == "Verb":
-                storedList[i] = verbList[randint(0,list(verbList()))]
+                num = random.randint(0,len(verbList[]))
+                storedList[i] = verbList[num]
             elif listOfWords[i] == "Adj ending with -est":
-                storedList[i] = adjestList[randint(0,list(adjestList()))]
+                num = random.randint(0,len(adjestList[]))
+                storedList[i] = adjestList[num]
             elif listOfWords[i] == "Verb ending in 'ing'":
-                storedList[i] = verbingList[randint(0,list(verbingList()))]
+                num = random.randint(0,len(verbingList[]))
+                storedList[i] = verbingList[num]
             elif listOfWords[i] == "Name":
-                storedList[i] = nameList[randint(0,list(nameList()))]
+                num = random.randint(0,len(nameList[]))
+                storedList[i] = nameList[num]
             elif listOfWords[i] == "Number":
-                storedList[i] = numList[randint(0,list(numList()))]
+                num = random.randint(0,len(numList[]))
+                storedList[i] = numList[num]
     else:
         for i in range(0, len(listOfWords)):
             improperInput = True
