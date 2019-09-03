@@ -3,10 +3,16 @@
 # August 28, 2019
 # Purpose: Creating a MadLinbs game in Python
 import string
+import random
 #inputWords = ["None"]
 #Tuple list to make sure contents dont change
 story1Words = ("Noun","Number","Noun","Verb","Adj","Verb ending in 'ing'","Adj","Adj","Noun","Name")
 story2Words = ("Adj","Noun","Adj ending with -est","Noun")
+
+adjList = ("Sour","Moist","Smelly","Clean","Annoying","Tired")
+nounList = ("Burrito","Chihuahua","Egg","Mouse","Pokeball")
+verbList = ("Run","Cry","Scream","Fly","Drop","Fight")
+numList = ("200","10","3","9","80")
 
 # def takeInput(list):
 #     #Taking in the words from user and assigning it to an array for use later
@@ -35,6 +41,7 @@ def isInputOkay(inputForList):
     if inputForList == "":
         return False
     elif inputForList in string.punctuation:
+        #https://www.geeksforgeeks.org/string-punctuation-in-python/
         return False
     else:
         return True
