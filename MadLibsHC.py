@@ -26,7 +26,7 @@ def createStory(listOfWords):
     userEnter = input("Would you like to let the computer decide the story? [Y]/[Any other button and you choose]: ")
     if userEnter == "Y" or userEnter == "Yes" or userEnter == "y":
         for i in range(0, len(listOfWords)):
-            print(i)
+            #print(i)
             if listOfWords[i] == "Noun":
                 storedList[i] = nounList[random.randint(0,len(nounList)-1)]
             elif listOfWords[i] == "Adj":
@@ -83,7 +83,7 @@ def printStory(choice, wordsGiven):
         " once he was done. He noticed that that his favorite "+wordsGiven[7]+" egg cup was missing. He ran all up and down the "+wordsGiven[8]+" looking for it. Alas, it was nowhere to be found, and so "+wordsGiven[9]+
         " went home with one less egg cup.")
         #storyChoice = list(story1)
-    if choice == 2:
+    elif choice == 2:
         print("Hello you absolute "+wordsGiven[0]+" "+wordsGiven[1]+". You better try your "+wordsGiven[2]+" today you "+wordsGiven[3]+".")
     else:
         print("Nothing Selected")
@@ -119,11 +119,11 @@ def MadGame():
             choice = 1
             #createStory(story1Words)
             printStory(choice, createStory(story1Words))
-        if choice == "2":
+        elif choice == "2":
             choice = 2
             #createStory(story1Words)
             printStory(choice, createStory(story2Words))
-        elif choice == "Q" or choice == "q" or choice == "Quit":
+        elif choice == "Q" or choice == "q" or choice == "Quit" or choice == "quit":
             on = False
         else:
             print("Sorry, That isn't an option")
