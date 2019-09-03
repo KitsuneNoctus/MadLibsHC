@@ -26,27 +26,21 @@ def createStory(listOfWords):
     userEnter = input("Would you like to let the computer decide the story? [Y]/[Any other button and you choose]: ")
     if userEnter == "Y" or userEnter == "Yes" or userEnter == "y":
         for i in range(0, len(listOfWords)):
+            print(i)
             if listOfWords[i] == "Noun":
-                num = random.randint(0,len(nounList[]))
-                storedList[i] = nounList[num]
+                storedList[i] = nounList[random.randint(0,len(nounList)-1)]
             elif listOfWords[i] == "Adj":
-                num = random.randint(0,len(adjList[]))
-                storedList[i] = adjList[num]
+                storedList[i] = adjList[random.randint(0,len(adjList)-1)]
             elif listOfWords[i] == "Verb":
-                num = random.randint(0,len(verbList[]))
-                storedList[i] = verbList[num]
+                storedList[i] = verbList[random.randint(0,len(verbList)-1)]
             elif listOfWords[i] == "Adj ending with -est":
-                num = random.randint(0,len(adjestList[]))
-                storedList[i] = adjestList[num]
+                storedList[i] = adjestList[random.randint(0,len(adjestList)-1)]
             elif listOfWords[i] == "Verb ending in 'ing'":
-                num = random.randint(0,len(verbingList[]))
-                storedList[i] = verbingList[num]
+                storedList[i] = verbingList[random.randint(0,len(verbingList)-1)]
             elif listOfWords[i] == "Name":
-                num = random.randint(0,len(nameList[]))
-                storedList[i] = nameList[num]
+                storedList[i] = nameList[random.randint(0,len(nameList)-1)]
             elif listOfWords[i] == "Number":
-                num = random.randint(0,len(numList[]))
-                storedList[i] = numList[num]
+                storedList[i] = numList[random.randint(0,len(numList)-1)]
     else:
         for i in range(0, len(listOfWords)):
             improperInput = True
