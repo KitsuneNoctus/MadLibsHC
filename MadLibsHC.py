@@ -27,19 +27,19 @@ def createStory(listOfWords):
     if userEnter == "Y" or userEnter == "Yes" or userEnter == "y":
         for i in range(0, len(listOfWords)):
             if listOfWords[i] == "Noun":
-                print("Meow")
+                storedList[i] = nounList[randint(0,list(nounList()))]
             elif listOfWords[i] == "Adj":
-                print("Moew")
+                storedList[i] = adjList[randint(0,list(adjList()))]
             elif listOfWords[i] == "Verb":
-                print("Hi")
+                storedList[i] = verbList[randint(0,list(verbList()))]
             elif listOfWords[i] == "Adj ending with -est":
-                print("j")
+                storedList[i] = adjestList[randint(0,list(adjestList()))]
             elif listOfWords[i] == "Verb ending in 'ing'":
-                print("Hi")
+                storedList[i] = verbingList[randint(0,list(verbingList()))]
             elif listOfWords[i] == "Name":
-                print("M")
+                storedList[i] = nameList[randint(0,list(nameList()))]
             elif listOfWords[i] == "Number":
-                print("N")
+                storedList[i] = numList[randint(0,list(numList()))]
     else:
         for i in range(0, len(listOfWords)):
             improperInput = True
