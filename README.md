@@ -2,6 +2,7 @@
 #Read me for MadLibs
 #How to play the game
 #A Game where a story is given with empty spaces and you have to fill in the blanks with the prompted word type
+#Access the game via the terminal
 1. Start game, given options
 2. Choose Which story you would like to fill in
 3. Choose whether or not you want to fill it in or have the computer do it
